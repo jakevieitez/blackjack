@@ -10,8 +10,8 @@ public class Blackjack implements ActionListener, ChangeListener  {
 	private GridBagConstraints c = new GridBagConstraints();
 	
 	// Images for the back of the card. 
-	private ImageIcon backOfCard = new ImageIcon("cards\\back.png");
-	private ImageIcon miniBackOfCard = new ImageIcon("cards\\MBOC.png");
+	private ImageIcon backOfCard = new ImageIcon("fullsizecards\\back.png");
+	private ImageIcon miniBackOfCard = new ImageIcon("smallsizecards\\MBOC.png");
 	
 	// JFRAMES
 	private static JFrame mainFrame;
@@ -350,7 +350,7 @@ public class Blackjack implements ActionListener, ChangeListener  {
 		String cardsFirstInitial = deckClass.cardValuetoString(hitCard); 
 		String fileNameforCard = "M" + cardsFirstInitial + hitCard.getSuit().substring(0,1) + ".png";
 	
-		ImageIcon hitCardImage = new ImageIcon("cards\\" + fileNameforCard);
+		ImageIcon hitCardImage = new ImageIcon("smallsizecards\\" + fileNameforCard);
 		
 		
 		if (person == "Player") {
@@ -1201,7 +1201,7 @@ public class Blackjack implements ActionListener, ChangeListener  {
 				splitButton.setEnabled(true);
 				
 				// SET DEALERS SHOW CARD IMAGE AND BOTH PLAYERS CARD IMAGES
-				ImageIcon dealerShowCard = new ImageIcon("cards\\" + imageNameForDealers2ndCard);
+				ImageIcon dealerShowCard = new ImageIcon("fullsizecards\\" + imageNameForDealers2ndCard);
 				dealerCard2.setIcon(dealerShowCard);
 
 				// Get initial values of the Dealers hand. 
@@ -1241,9 +1241,9 @@ public class Blackjack implements ActionListener, ChangeListener  {
 					playersCard2NameFirstLetter = deckClass.cardValuetoString(players2ndCard);
 					imageNameForP2C = playersCard2NameFirstLetter + players2ndCard.getSuit().substring(0, 1) + ".png";
 					
-					ImageIcon playerShowCard1 = new ImageIcon("cards\\" + imageNameForP1C);
+					ImageIcon playerShowCard1 = new ImageIcon("fullsizecards\\" + imageNameForP1C);
 					playerCard.setIcon(playerShowCard1);
-					ImageIcon playerShowCard2 = new ImageIcon("cards\\" + imageNameForP2C);
+					ImageIcon playerShowCard2 = new ImageIcon("fullsizecards\\" + imageNameForP2C);
 					playerCard2.setIcon(playerShowCard2);
 				
 	
@@ -1348,7 +1348,7 @@ public class Blackjack implements ActionListener, ChangeListener  {
 				// End turn for player
 			
 				// Display dealers other card
-				ImageIcon dealersHiddenCard = new ImageIcon("cards\\" + imageNameForDealers1stCard);
+				ImageIcon dealersHiddenCard = new ImageIcon("fullsizecards\\" + imageNameForDealers1stCard);
 				dealerCard1.setIcon(dealersHiddenCard);
 				
 				game.checkIfHandWins();
